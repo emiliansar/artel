@@ -498,7 +498,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0;
-  transform: .2s;
+  transition: opacity .2s ease;
 }
 .project--menu .checkbox--list .checkbox--list__input:checked + .checkbox--list__fake::before {
   opacity: 1;
