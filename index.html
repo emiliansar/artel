@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Проекты зданий</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<header class="header">
+		<div class="container">
+			<nav class="main-nav">
+				<a href="#" class="logo">
+					<img src="images/logo.svg" alt="" class="logo-img">
+					<h4 class="logo-text">
+						<span>АРТЕЛЬ</span> ПРОЕКТ
+					</h4>
+				</a>
+				<div class="contacts-menu">
+					<div class="contacts">
+						<a href="tel:+79061536104" class="contacts-link">
+							+7 (912) 999-99-99
+						</a>
+						<button type="button" class="contacts-copy" id="contactsCopy" title="Скопировать телефон">
+							<img src="images/copy-tel.svg" alt="">
+						</button>
+					</div>
+					<button type="button" class="burger-menu" id="burgerMenu">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+				</div>
+			</nav>
+
+			<div class="content">
+				<h1 class="main-title header-title">
+					<span class="main-title-ready-made__projects">
+						Готовые проекты
+					</span>
+					<span class="header-title-building">
+						зданий <span>для</span> вашего
+					</span>
+					<span class="header-title-business">
+						бизнеса
+					</span>
+				</h1>
+
+				<div class="projects-contacts">
+					<ul class="projects">
+						<li class="projects-item">
+							<a href="#" class="projects-link">
+								<img src="images/projects-link-1.png" alt="" class="projects-img">
+								<p class="normal-text
+							">Проекты для сельского хозяйства</p>
+							</a>
+						</li>
+						<li class="projects-item">
+							<a href="#" class="projects-link">
+								<img src="images/projects-link-2.png" alt="" class="projects-img">
+								<p class="normal-text
+							">Проекты для торговли и хранения</p>
+							</a>
+						</li>
+						<li class="projects-item">
+							<a href="#" class="projects-link">
+								<img src="images/projects-link-3.png" alt="" class="projects-img">
+								<p class="normal-text
+							">Проекты гаражей, мастерских и СТО </p>
+							</a>
+						</li>
+					</ul>
+					<div class="contacts">
+						<a href="tel:+79061536104" class="contacts-copy">
+							<img src="images/CallTouch.svg" alt="">
+						</a>
+						<p class="contacts-text">
+							Готовые проекты
+							для бизнеса,
+							проверенные реальным бизнесом
+						</p>
+						<a href="#structure" type="button" class="contacts-link normal-text">
+							ВЫБРАТЬ ПРОЕКТ
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav class="menu" id="menu">
+			<div class="contacts-close">
+				<div class="contacts">
+					<a href="tel:+79061536104" class="contacts-link">
+						+7 (912) 999-99-99
+					</a>
+					<button type="button" class="contacts-copy" id="contactsCopy" title="Скопировать телефон">
+						<img src="images/copy-tel__menu.svg" alt="">
+					</button>
+				</div>
+				<button type="button" class="burger-menu" id="burgerMenu">
+					<img src="images/close-menu.svg" alt="">
+				</button>
+			</div>
+			<ul class="menu-list">
+				<li class="list-item">
+					<a href="#" class="normal-text list-link">
+						Состав проекта
+					</a>
+				</li>
+				<li class="list-item">
+					<a href="#" class="normal-text list-link">
+						Отзывы
+					</a>
+				</li>
+				<li class="list-item">
+					<a href="#" class="normal-text list-link">
+						Наши работы
+					</a>
+				</li>
+				<li class="list-item">
+					<a href="#" class="normal-text list-link">
+						О нас
+					</a>
+				</li>
+				<li class="list-item">
+					<a href="#" class="normal-text list-link">
+						Команда
+					</a>
+				</li>
+				<li class="list-item">
+					<a href="#" class="normal-text list-link">
+						Контакты
+					</a>
+				</li>
+			</ul>
+			<div class="connection">
+				<p class="connection-text">
+					Напишите нам:
+				</p>
+				<ul class="connection-links">
+					<li class="connection-item">
+						<a href="#" class="connection-link">
+							<img src="images/telegram.svg" alt="">
+						</a>
+					</li>
+					<li class="connection-item">
+						<a href="#" class="connection-link">
+							<img src="images/whatsapp.svg" alt="">
+						</a>
+					</li>
+					<li class="connection-item">
+						<a href="#" class="connection-link">
+							<img src="images/viber.svg" alt="">
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button type="button" class="normal-text order-call">
+				ЗАКАЗАТЬ ЗВОНОК
+			</button>
+		</nav>
+	</header>
+	<main class="main">
+		<section class="structure" id="structure">
+			<div class="container">
+				<h1 class="section-title structure-title__section">Состав проекта</h1>
+
+				<div class="structure-wrapper">
+					<div class="structure-item">
+						<div class="structure-title">
+							<p class="structure-title__sub-title">
+								Каждый проект включает в себя:
+							</p>
+							<p class="structure-title__title">
+								Комплект чертежей КМ
+							</p>
+							<button type="button" class="structure-title__btn" data-button="structure-content__1">
+							</button>
+						</div>
+						<div class="structure-content structure-content__1">
+							<div class="structure-image">
+								<img id="structureImage" src="images/project-1.png" alt="">
+								<button type="button" id="zoom" class="structure-image__zoom">
+									<img src="images/zoom.svg" alt="">
+								</button>
+							</div>
+							<div class="structure-descr">
+								<ul class="structure-list">
+									<li class="structure-list__item">
+										<a href="#" class="structure-list__link">
+											Общая информация.
+										</a>
+									</li>
+									<li class="structure-list__item">
+										<a href="#" class="structure-list__link">
+											Данные о нагрузках и прочих воздействиях на конструкции.
+										</a>
+									</li>
+									<li class="structure-list__item">
+										<a href="#" class="structure-list__link">
+											Сведения о нагрузках на фундаментные основания.
+										</a>
+									</li>
+									<li class="structure-list__item">
+										<a href="#" class="structure-list__link">
+											Чертежи общих видов конструкций зданий и сооружений (при необходимости).
+										</a>
+									</li>
+									<li class="structure-list__item">
+										<a href="#" class="structure-list__link">
+											Схемы расположения элементов конструкций.
+										</a>
+									</li>
+									<li class="structure-list__item">
+										<a href="#" class="structure-list__link">
+											Чертежи элементов конструкций.
+										</a>
+									</li>
+									<li class="structure-list__item">
+										<a href="#" class="structure-list__link">
+											Чертежи узлов конструкций.
+										</a>
+									</li>
+								</ul>
+								<button class="structure-example" id="btnProjectMenu">
+									ПОСМОТРЕТЬ ПРИМЕР
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="structure-item">
+						<div class="structure-title">
+							<p class="structure-title__sub-title">
+								Каждый проект включает в себя:
+							</p>
+							<p class="structure-title__title">
+								Комплект чертежей КМ
+							</p>
+							<button type="button" class="structure-title__btn" data-button="structure-content__2">
+							</button>
+						</div>
+						<div class="structure-content structure-content__2">
+							<div class="structure-image">
+								<img id="structureImage" src="images/project-1.png" alt="">
+								<button type="button" id="zoom" class="structure-image__zoom">
+									<img src="images/zoom.svg" alt="">
+								</button>
+							</div>
+							<div class="structure-descr">
+								<ul class="structure-list">
+									<li class="structure-list__item">
+										<a href="#" class="structure-list__link">
+											Общая информация.
+										</a>
+									</li>
+									<li class="structure-list__item">
+										<a href="#" class="structure-list__link">
+											Данные о нагрузках и прочих воздействиях на конструкции.
+										</a>
+									</li>
+									<li class="structure-list__item">
+										<a href="#" class="structure-list__link">
+											Сведения о нагрузках на фундаментные основания.
+										</a>
+									</li>
+									<li class="structure-list__item">
+										<a href="#" class="structure-list__link">
+											Чертежи общих видов конструкций зданий и сооружений (при необходимости).
+										</a>
+									</li>
+									<li class="structure-list__item">
+										<a href="#" class="structure-list__link">
+											Схемы расположения элементов конструкций.
+										</a>
+									</li>
+									<li class="structure-list__item">
+										<a href="#" class="structure-list__link">
+											Чертежи элементов конструкций.
+										</a>
+									</li>
+									<li class="structure-list__item">
+										<a href="#" class="structure-list__link">
+											Чертежи узлов конструкций.
+										</a>
+									</li>
+								</ul>
+								<button class="structure-example" id="btnProjectMenu">
+									ПОСМОТРЕТЬ ПРИМЕР
+								</button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="image--cover" id="imageCover">
+				<img class="image--cover__img" src="images/plan.jpg" alt="">
+				<button type="button" class="structure-image__zoom image--cover__btn" id="imageCloseCover">
+					<img src="images/close-menu.svg" alt="">
+				</button>
+			</div>
+			<div class="project--menu__wrapper">
+				<form class="project--menu">
+					<div class="menu--title">
+						<p class="menu--title__text normal-text">
+							Получить пример комплекта
+							чертежей
+						</p>
+						<button type="button" class="project--menu__close" id="btnProjectMenu">
+							<img src="images/close-menu.svg" alt="">
+						</button>
+					</div>
+					<p class="menu--descr">
+						Оставьте ваши данные и мы отправим вам комплект чертежей удобным вам способом.
+					</p>
+					<ul class="input--list">
+						<li class="input--list__item">
+							<label for="name">Имя</label>
+							<input type="text" name="name" id="" class="input--list__input">
+						</li>
+						<li class="input--list__item">
+							<label for="tel">Номер телефона</label>
+							<input type="text" name="tel" id="" class="input--list__input">
+						</li>
+						<li class="input--list__item">
+							<label for="email">Email</label>
+							<input type="text" name="email" id="" class="input--list__input">
+						</li>
+					</ul>
+
+					<ul class="checkbox--list">
+						<li class="checkbox--list__item">
+							<label class="checkbox--list__label" for="mail">
+								<input type="checkbox" name="" class="checkbox--list__input" id="mail">
+								<span class="checkbox--list__fake"></span>
+								<span class="checkbox--list__text">
+									Отправить по почте
+								</span>
+							</label>
+						</li>
+						<li class="checkbox--list__item">
+							<label class="checkbox--list__label" for="whatsapp">
+								<input type="checkbox" name="" class="checkbox--list__input" id="whatsapp">
+								<span class="checkbox--list__fake"></span>
+								<span class="checkbox--list__text">
+									Отправить по WhatsApp
+								</span>
+							</label>
+						</li>
+						<li class="checkbox--list__item">
+							<label class="checkbox--list__label" for="viber">
+								<input type="checkbox" name="" class="checkbox--list__input" id="viber">
+								<span class="checkbox--list__fake"></span>
+								<span class="checkbox--list__text">
+									Отправить по Viber
+								</span>
+							</label>
+						</li>
+						<li class="checkbox--list__item">
+							<label class="checkbox--list__label" for="telegram">
+								<input type="checkbox" name="" class="checkbox--list__input" id="telegram">
+								<span class="checkbox--list__fake"></span>
+								<span class="checkbox--list__text">
+									Отправить в Telegram
+								</span>
+							</label>
+						</li>
+					</ul>
+					<button type="submit" class="submit--project normal-text">
+						Отправить
+					</button>
+
+					<a href="#" class="privacy--policy">
+						Нажимая на кнопку, вы принимаете политику конфиденциальности и даете согласие на обработку персональных
+						данных.
+					</a>
+				</form>
+			</div>
+		</section>
+	</main>
+
+	<script src="js/script.js"></script>
+</body>
+
+</html>
