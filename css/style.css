@@ -722,3 +722,141 @@ body {
   font-size: 14px;
   border-radius: 100px;
 }
+
+.design--bureau {
+  margin-bottom: 112px;
+}
+.design--bureau__title {
+  position: relative;
+  height: 180px;
+  margin-bottom: 83px;
+}
+.design--bureau__title--text {
+  width: 1980px;
+  font-size: 180px;
+  color: rgba(40, 92, 174, 0.1);
+  line-height: 100%;
+  position: absolute;
+  animation: line-text 6s linear 1s infinite;
+}
+.design--bureau__info {
+  display: flex;
+}
+.design--bureau__emptiness {
+  position: relative;
+  flex: 1;
+}
+.design--bureau__descr {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 303px;
+  color: rgba(40, 92, 174, 0.6);
+}
+.design--bureau__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  color: #285CAE;
+  gap: 54px;
+  flex: 1;
+}
+.design--bureau__item {
+  max-width: 260px;
+  position: relative;
+}
+.design--bureau__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -55px;
+  width: 32px;
+  height: 32px;
+  background-image: url(../images/check.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@keyframes line-text {
+  from {
+    transform: translateX(115%);
+    transform-origin: left center;
+  }
+  to {
+    transform: translateX(-115%);
+    transform-origin: right center;
+  }
+}
+.team {
+  border-radius: 24px;
+  background: linear-gradient(180deg, #0060fe, rgba(0, 96, 254, 0.8) 100%);
+}
+.team--wrapper {
+  display: flex;
+  justify-content: space-between;
+  min-width: 0;
+}
+.team .about--us {
+  margin: 48px 0 32px 32px;
+  flex: 1;
+}
+.team .about--us__normal {
+  margin-bottom: 40px;
+}
+.team .about--us__title {
+  margin-bottom: 156px;
+}
+
+.worker--text__slider {
+  max-width: 530px;
+  width: 100%;
+  min-width: 0;
+  max-height: 368px;
+  margin-bottom: 58px;
+}
+.worker--text__slider .slick-track {
+  display: block;
+}
+.worker--text__slider--slide {
+  max-width: 530px;
+  min-width: 530px;
+  color: rgba(255, 255, 255, 0.6);
+  min-height: 304px;
+}
+.worker--text__slider--slide .worker--name {
+  font-size: 32px;
+  color: #fff;
+}
+.worker--text__slider--slide .worker--specialization {
+  margin-bottom: 40px;
+}
+.worker--text__slider--slide .worker--descr {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.worker--counter {
+  color: rgba(255, 255, 255, 0.6);
+}
+.worker--counter__current {
+  color: #fff;
+}
+
+.worker--images__slider {
+  min-width: 0;
+  flex: 1;
+}
+.worker--images__slider .slick-list {
+  padding: 32px 0;
+}
+.worker--images__slider .slick-track {
+  display: block;
+}
+.worker--images__slider--slide {
+  min-width: 488px;
+  height: 776px;
+}
+
+.map .layout-control-group {
+  display: none;
+}

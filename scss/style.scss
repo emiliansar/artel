@@ -810,3 +810,167 @@ body {
 		}
 	}
 }
+
+.design--bureau {
+	margin-bottom: 112px;
+
+	&__title {
+		position: relative;
+		height: 180px;
+		margin-bottom: 83px;
+
+		&--text {
+			width: 1980px;
+			font-size: 180px;
+			color: rgba(#285CAE, 0.1);
+			line-height: 100%;
+			position: absolute;
+			animation: line-text 6s linear 1s infinite;
+		}
+	}
+
+	&__info {
+		display: flex;
+	}
+
+	&__emptiness {
+		position: relative;
+		flex: 1;
+	}
+
+	&__descr {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		max-width: 303px;
+		color: rgba(#285CAE, 0.6);
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		color: #285CAE;
+		gap: 54px;
+		flex: 1;
+	}
+
+	&__item {
+		max-width: 260px;
+		position: relative;
+	}
+
+	&__item::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: -55px;
+		width: 32px;
+		height: 32px;
+		background-image: url(../images/check.svg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}
+
+@keyframes line-text {
+	from {
+		transform: translateX(115%);
+		transform-origin: left center;
+	}
+
+	to {
+		transform: translateX(-115%);
+		transform-origin: right center;
+	}
+}
+
+.team {
+	border-radius: 24px;
+	background: linear-gradient(180.00deg, rgb(0, 96, 254), rgba(0, 96, 254, 0.8) 100%);
+
+	&--wrapper {
+		display: flex;
+		justify-content: space-between;
+		min-width: 0;
+	}
+
+	& .about--us {
+		margin: 48px 0 32px 32px;
+		flex: 1;
+
+		&__normal {
+			margin-bottom: 40px;
+		}
+
+		&__title {
+			margin-bottom: 156px;
+		}
+	}
+}
+
+.worker--text__slider {
+	max-width: 530px;
+	width: 100%;
+	min-width: 0;
+	max-height: 368px;
+	margin-bottom: 58px;
+
+	& .slick-track {
+		// flex-direction: column;
+		display: block;
+	}
+
+	&--slide {
+		max-width: 530px;
+		min-width: 530px;
+		color: rgba(#fff, 0.6);
+		min-height: 304px;
+
+		& .worker--name {
+			font-size: 32px;
+			color: #fff;
+		}
+
+		& .worker--specialization {
+			margin-bottom: 40px;
+		}
+
+		& .worker--descr {
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+		}
+	}
+}
+
+.worker--counter {
+	color: rgba(#fff, 0.6);
+
+	&__current {
+		color: #fff;
+	}
+}
+
+.worker--images__slider {
+	min-width: 0;
+	flex: 1;
+
+	& .slick-list {
+		padding: 32px 0;
+	}
+
+	& .slick-track {
+		display: block;
+	}
+
+	&--slide {
+		min-width: 488px;
+		height: 776px;
+	}
+}
+
+.map {
+	& .layout-control-group {
+		display: none;
+	}
+}
