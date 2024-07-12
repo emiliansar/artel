@@ -80,6 +80,31 @@ body {
   align-items: center;
 }
 
+.main-nav__scroll {
+  display: none;
+  position: fixed;
+  max-width: 100%;
+  width: 1376px;
+  top: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6;
+  background-color: #fff;
+}
+.main-nav__scroll .scroll--link {
+  font-size: 14px;
+  color: #F1F6FF;
+  padding: 17px 24px;
+  background-color: #0060FE;
+  border-radius: 100px;
+}
+.main-nav__scroll .contacts-link {
+  color: #285CAE;
+}
+.main-nav__scroll .burger-menu span {
+  background-color: #0060FE;
+}
+
 .logo {
   display: flex;
   gap: 9px;

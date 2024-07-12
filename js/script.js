@@ -48,3 +48,14 @@ btnProjectMenu.forEach(function (element) {
 function openProjectMenu() {
 	document.querySelector(".project--menu__wrapper").classList.toggle("project--menu__wrapper--active");
 }
+
+window.addEventListener("scroll", function () {
+	let element = document.querySelector(".main-nav__scroll");
+	let scrollPosition = window.scrollY;
+
+	if (scrollPosition > 100) {
+		element.style.display = "flex";
+	} else {
+		element.style.display = "none";
+	}
+});
