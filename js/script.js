@@ -59,3 +59,21 @@ window.addEventListener("scroll", function () {
 		element.style.display = "none";
 	}
 });
+
+let showMore = document.querySelector(".show--more");
+let showMoreRemainder = document.querySelector(".show--more__remainder");
+let CardListLength = document.querySelectorAll(".project--grid__item").length;
+let items = 6;
+
+showMore.addEventListener("click", () => {
+	items += 3;
+	showMoreRemainder.innerHTML -= 3;
+	const array = Array.from(document.querySelector(".project--grid").children);
+
+	const visItems = array.slice(0, items);
+
+	visItems.forEach(el => el.classList.add("project--grid__item--active"));
+
+	if (visItems.length === CardListLength)
+		showMore.style.display = "none";
+});

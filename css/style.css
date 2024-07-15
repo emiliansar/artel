@@ -6,8 +6,14 @@
   font-family: "Neue Montreal";
   src: url(../fonts/ppneuemontreal-medium.woff);
 }
-html {
+html,
+body {
   box-sizing: border-box;
+  background-color: #F1F6FF;
+  font-family: "Helvetica", sans-serif;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 *,
@@ -22,11 +28,6 @@ html {
 }
 
 body {
-  background-color: #F1F6FF;
-  font-family: "Neue Montreal";
-  color: #fff;
-  font-size: 18px;
-  font-weight: 400;
   overflow-x: hidden;
 }
 
@@ -54,6 +55,7 @@ body {
 }
 
 .header {
+  min-height: 790px;
   padding: 32px 0;
   background: linear-gradient(180deg, rgba(0, 96, 254, 0.8), #0060fe 100%);
   border-radius: 0 0 24px 24px;
@@ -174,6 +176,119 @@ body {
 }
 .header-title-business {
   text-align: right;
+}
+
+.project--grid__section {
+  position: relative;
+  width: 100%;
+  margin-top: -129px;
+  z-index: 5;
+}
+
+.project--grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  color: #285CAE;
+}
+.project--grid__item {
+  border-radius: 24px;
+  background-color: #fff;
+}
+.project--grid__item img {
+  width: 100%;
+  padding: 4px 4px 0 4px;
+  margin-bottom: 25px;
+}
+.project--grid__item:nth-child(n + 7) {
+  display: none;
+}
+.project--grid__item.project--grid__item--active {
+  display: block;
+}
+.project--grid__text {
+  padding: 0 24px 24px 24px;
+}
+.project--grid__descr {
+  line-height: 22px;
+  margin-bottom: 23px;
+}
+
+.price--buy {
+  display: flex;
+  justify-content: space-between;
+}
+.price--buy .price {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.price--buy .price--current {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 700;
+}
+.price--buy .price--strike {
+  font-weight: 16;
+  font-weight: 530;
+  line-height: 19px;
+  color: rgba(40, 92, 174, 0.6);
+}
+.price--buy .buy--project {
+  padding: 18px 24px;
+  border-radius: 100px;
+  background-color: #0060FE;
+  font-size: 14px;
+  color: #fff;
+}
+
+.more {
+  width: 100%;
+  margin-top: 32px;
+}
+.more .show--more {
+  width: 100%;
+  padding: 18px 24px 16px;
+  border: 1px solid rgba(40, 92, 174, 0.2);
+  background-color: transparent;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0060FE;
+  line-height: 14px;
+}
+
+.buy--project__wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 14, 37, 0.8);
+  z-index: 10;
+  transform: translateX(150%);
+  transition: transform .8s ease;
+}
+
+.buy--project__wrapper--active {
+  transform: translateX(0);
+}
+
+.buy--project {
+  max-width: 464px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: #FFFFFF;
+  margin: 0 0 0 auto;
+  padding: 32px;
+}
+.buy--project .project--title {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 24px;
 }
 
 .projects-contacts {
