@@ -90,7 +90,7 @@ body {
   top: 32px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 6;
+  z-index: 5;
   background-color: #fff;
 }
 .main-nav__scroll .scroll--link {
@@ -265,30 +265,85 @@ body {
   top: 0;
   left: 0;
   background-color: rgba(0, 14, 37, 0.8);
-  z-index: 10;
   transform: translateX(150%);
   transition: transform .8s ease;
+  z-index: 15;
 }
 
 .buy--project__wrapper--active {
   transform: translateX(0);
 }
 
-.buy--project {
-  max-width: 464px;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  background-color: #FFFFFF;
-  margin: 0 0 0 auto;
-  padding: 32px;
+.buy--project__wrapper .project--menu .menu--title {
+  margin-bottom: 16px;
 }
-.buy--project .project--title {
+.buy--project__wrapper .project--menu .menu--title__text {
+  color: #285CAE;
+  line-height: 110%;
+}
+.buy--project__wrapper .project--menu__close {
+  align-self: flex-start;
+}
+.buy--project__wrapper .project--menu__img {
+  margin-bottom: 19px;
+}
+.buy--project__wrapper .project--menu .menu--descr {
   display: flex;
-  gap: 16px;
+  gap: 18px;
   align-items: center;
-  margin-bottom: 24px;
+  color: #0060FE;
+  font-weight: 530;
+  margin-bottom: 16px;
+}
+.buy--project__wrapper .project--menu .menu--descr img {
+  align-self: flex-start;
+}
+.buy--project__wrapper .project--menu .payment {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #285CAE;
+  margin-bottom: 16px;
+}
+.buy--project__wrapper .project--menu .payment--descr {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.buy--project__wrapper .project--menu .payment--text {
+  font-weight: 530;
+  line-height: 22px;
+  align-self: flex-end;
+}
+.buy--project__wrapper .project--menu .payment--del {
+  font-size: 16px;
+  font-weight: 530;
+  line-height: 19px;
+  color: rgba(40, 92, 174, 0.6);
+}
+.buy--project__wrapper .project--menu .payment--price {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+}
+.buy--project__wrapper .project--menu .submit--project {
+  margin-bottom: 16px;
+}
+.buy--project__wrapper .project--menu .buy--project {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  color: rgba(40, 92, 174, 0.6);
+}
+.buy--project__wrapper .project--menu .buy--project__descr {
+  font-size: 12px;
+  font-weight: 530;
+  line-height: 14px;
+}
+.buy--project__wrapper .project--menu .buy--project__list {
+  display: flex;
+  gap: 15px;
+  align-items: center;
 }
 
 .projects-contacts {

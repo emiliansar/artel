@@ -77,3 +77,12 @@ showMore.addEventListener("click", () => {
 	if (visItems.length === CardListLength)
 		showMore.style.display = "none";
 });
+
+let btnBuyProject = document.querySelectorAll("#btnBuyProject");
+let buyProject = document.querySelector(".buy--project__wrapper");
+
+btnBuyProject.forEach(function (element) {
+	element.addEventListener("click", () => {
+		buyProject.classList.toggle("buy--project__wrapper--active");
+	});
+});
