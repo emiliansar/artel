@@ -95,7 +95,7 @@ body {
 	top: 32px;
 	left: 50%;
 	transform: translateX(-50%);
-	z-index: 5;
+	z-index: 4;
 	background-color: #fff;
 
 	& .scroll--link {
@@ -194,11 +194,27 @@ body {
 	}
 }
 
+.project--title {
+	font-size: 100px;
+	gap: 5px;
+
+	& .header-title-building {
+		line-height: 70%;
+	}
+
+	& .header-title-business {
+		line-height: 70%;
+		text-align: center;
+		word-spacing: 100px;
+		position: relative;
+		left: 40px;
+	}
+}
+
 .project--grid__section {
 	position: relative;
 	width: 100%;
 	margin-top: -129px;
-	z-index: 5;
 }
 
 .project--grid {
@@ -365,6 +381,10 @@ body {
 			font-weight: 400;
 			line-height: 29px;
 		}
+	}
+
+	& input {
+		color: #285CAE;
 	}
 
 	& .submit--project {
@@ -735,10 +755,24 @@ body {
 		margin-bottom: 32px;
 
 		&__item {
+			display: flex;
+			flex-direction: column;
+			position: relative;
+
 			& label {
 				font-size: 12px;
 				color: rgba(#285CAE, 0.6);
 				margin-bottom: 4px;
+			}
+
+			& span {
+				position: absolute;
+				bottom: -17px;
+				right: 0;
+				font-size: 11px;
+				line-height: 11px;
+				color: #EB001B;
+				display: none;
 			}
 		}
 
@@ -1047,7 +1081,7 @@ body {
 		margin-bottom: 83px;
 
 		&--text {
-			width: 1980px;
+			width: 1990px;
 			font-size: 180px;
 			color: rgba(#285CAE, 0.1);
 			line-height: 100%;

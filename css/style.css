@@ -90,7 +90,7 @@ body {
   top: 32px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 5;
+  z-index: 4;
   background-color: #fff;
 }
 .main-nav__scroll .scroll--link {
@@ -178,11 +178,25 @@ body {
   text-align: right;
 }
 
+.project--title {
+  font-size: 100px;
+  gap: 5px;
+}
+.project--title .header-title-building {
+  line-height: 70%;
+}
+.project--title .header-title-business {
+  line-height: 70%;
+  text-align: center;
+  word-spacing: 100px;
+  position: relative;
+  left: 40px;
+}
+
 .project--grid__section {
   position: relative;
   width: 100%;
   margin-top: -129px;
-  z-index: 5;
 }
 
 .project--grid {
@@ -325,6 +339,9 @@ body {
   font-size: 24px;
   font-weight: 400;
   line-height: 29px;
+}
+.buy--project__wrapper .project--menu input {
+  color: #285CAE;
 }
 .buy--project__wrapper .project--menu .submit--project {
   margin-bottom: 16px;
@@ -652,10 +669,24 @@ body {
   gap: 24px;
   margin-bottom: 32px;
 }
+.project--menu .input--list__item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
 .project--menu .input--list__item label {
   font-size: 12px;
   color: rgba(40, 92, 174, 0.6);
   margin-bottom: 4px;
+}
+.project--menu .input--list__item span {
+  position: absolute;
+  bottom: -17px;
+  right: 0;
+  font-size: 11px;
+  line-height: 11px;
+  color: #EB001B;
+  display: none;
 }
 .project--menu .input--list__input {
   background-color: rgba(40, 92, 174, 0.1);
@@ -927,7 +958,7 @@ body {
   margin-bottom: 83px;
 }
 .design--bureau__title--text {
-  width: 1980px;
+  width: 1990px;
   font-size: 180px;
   color: rgba(40, 92, 174, 0.1);
   line-height: 100%;

@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Проекты зданий</title>
+	<title>Проекты ферм</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -62,15 +62,15 @@
 			</nav>
 
 			<div class="content">
-				<h1 class="main--title header-title">
+				<h1 class="main--title header-title project--title">
 					<span class="header-title-ready-made__projects">
 						Готовые проекты
 					</span>
 					<span class="header-title-building">
-						зданий <span>для</span> вашего
+						ферм КРС и других <span>зданий</span>
 					</span>
 					<span class="header-title-business">
-						бизнеса
+						сельхоз назначения
 					</span>
 				</h1>
 			</div>
@@ -780,8 +780,8 @@
 					</button>
 				</div>
 			</div>
-			<div class="buy--project__wrapper buy--project__wrapper--active">
-				<form class="project--menu">
+			<div class="buy--project__wrapper">
+				<form class="project--menu buy--project__form">
 					<div class="menu--title">
 						<p class="normal-text menu--title__text">
 							Покупка «‎Ферма КРС привязного содержания
@@ -802,15 +802,24 @@
 					<ul class="input--list">
 						<li class="input--list__item">
 							<label for="name">ФИО</label>
-							<input type="text" name="name" id="" class="input--list__input">
+							<input type="text" name="name" id="" class="input--list__input input--list__input--fcs">
+							<span class="error--fcs">
+								Ошибка. Введите имя
+							</span>
 						</li>
 						<li class="input--list__item">
 							<label for="tel">Номер телефона</label>
-							<input type="tel" name="tel" id="" class="input--list__input">
+							<input type="tel" name="tel" id="" class="input--list__input input--list__input--tel__top">
+							<span class="error--tel__top">
+								Ошибка. Введите номер телефона
+							</span>
 						</li>
 						<li class="input--list__item">
-							<label for="address">Email</label>
-							<input type="text" name="address" id="" class="input--list__input">
+							<label for="address">Адрес</label>
+							<input type="text" name="address" id="" class="input--list__input input--list__input--address">
+							<span class="error--address">
+								Ошибка. Введите адресс доставки
+							</span>
 						</li>
 					</ul>
 
@@ -991,7 +1000,7 @@
 				</button>
 			</div>
 			<div class="project--menu__wrapper">
-				<form class="project--menu">
+				<form class="project--menu project--menu__download">
 					<div class="menu--title">
 						<p class="menu--title__text normal-text">
 							Получить пример комплекта
@@ -1007,15 +1016,18 @@
 					<ul class="input--list">
 						<li class="input--list__item">
 							<label for="name">Имя</label>
-							<input type="text" name="name" id="" class="input--list__input">
+							<input type="text" name="name" id="" class="input--list__input input--list__input--name">
+							<span class="error--name">Ошибка. Введите имя</span>
 						</li>
 						<li class="input--list__item">
 							<label for="tel">Номер телефона</label>
-							<input type="text" name="tel" id="" class="input--list__input">
+							<input type="text" name="tel" id="" class="input--list__input input--list__input--tel">
+							<span class="error--tel">Ошибка. Введите номер телефона</span>
 						</li>
 						<li class="input--list__item">
 							<label for="email">Email</label>
-							<input type="text" name="email" id="" class="input--list__input">
+							<input type="text" name="email" id="" class="input--list__input input--list__input--email">
+							<span class="error--email">Ошибка введите адресс электронной почты</span>
 						</li>
 					</ul>
 
@@ -1614,6 +1626,7 @@
 	<script src="js/slick.min.js"></script>
 	<script src="js/slick--slider.js"></script>
 	<script src="js/script.js"></script>
+	<script src="js/form-project.js"></script>
 </body>
 
 </html>
