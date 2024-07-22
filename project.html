@@ -11,14 +11,11 @@
 </head>
 
 <body>
-	<header class="header">
+	<header class="header header--buy__project">
 		<div class="container">
 			<nav class="main-nav">
 				<a href="#" class="logo">
-					<img src="images/logo.svg" alt="" class="logo-img">
-					<h4 class="logo-text">
-						<span>АРТЕЛЬ</span> ПРОЕКТ
-					</h4>
+					<img src="images/logo--main.png" alt="" class="logo-img">
 				</a>
 				<div class="contacts-menu">
 					<div class="contacts">
@@ -37,29 +34,31 @@
 				</div>
 			</nav>
 
-			<nav class="main-nav main-nav__scroll">
-				<a href="#" class="logo">
-					<img src="images/logo--menu__fixed.png" alt="" class="logo-img">
-				</a>
-				<div class="contacts-menu">
-					<div class="contacts">
-						<a href="#structure" type="button" class="scroll--link normal-text">
-							ВЫБРАТЬ ПРОЕКТ
-						</a>
-						<a href="tel:+79061536104" class="contacts-link">
-							+7 (912) 999-99-99
-						</a>
-						<button type="button" class="contacts-copy" id="contactsCopy" title="Скопировать телефон">
-							<img src="images/tel--copy__scroll.svg" alt="">
+			<div class="main-nav__scroll--wrapper">
+				<nav class="main-nav main-nav__scroll">
+					<a href="#" class="logo">
+						<img src="images/logo--menu__fixed.png" alt="" class="logo-img">
+					</a>
+					<div class="contacts-menu">
+						<div class="contacts">
+							<a href="#structure" type="button" class="scroll--link normal-text">
+								ВЫБРАТЬ ПРОЕКТ
+							</a>
+							<a href="tel:+79061536104" class="contacts-link">
+								+7 (912) 999-99-99
+							</a>
+							<button type="button" class="contacts-copy" id="contactsCopy" title="Скопировать телефон">
+								<img src="images/tel--copy__scroll.svg" alt="">
+							</button>
+						</div>
+						<button type="button" class="burger-menu" id="burgerMenu">
+							<span></span>
+							<span></span>
+							<span></span>
 						</button>
 					</div>
-					<button type="button" class="burger-menu" id="burgerMenu">
-						<span></span>
-						<span></span>
-						<span></span>
-					</button>
-				</div>
-			</nav>
+				</nav>
+			</div>
 
 			<div class="content">
 				<h1 class="main--title header-title project--title">
@@ -879,10 +878,13 @@
 						</div>
 						<div class="structure-content structure-content__1">
 							<div class="structure-image">
-								<img id="structureImage" src="images/project-1.png" alt="">
-								<button type="button" id="zoom" class="structure-image__zoom">
-									<img src="images/zoom.svg" alt="">
-								</button>
+								<div class="image--wrapper">
+									<img id="structureImage" src="images/project-1.png" alt="">
+									<button type="button" id="zoom" class="structure-image__zoom">
+										<img src="images/zoom.svg" alt="">
+									</button>
+								</div>
+
 							</div>
 							<div class="structure-descr">
 								<ul class="structure-list">
@@ -941,10 +943,13 @@
 						</div>
 						<div class="structure-content structure-content__2">
 							<div class="structure-image">
-								<img id="structureImage" src="images/project-1.png" alt="">
-								<button type="button" id="zoom" class="structure-image__zoom">
-									<img src="images/zoom.svg" alt="">
-								</button>
+								<div class="image--wrapper">
+									<img id="structureImage" src="images/project-1.png" alt="">
+									<button type="button" id="zoom" class="structure-image__zoom">
+										<img src="images/zoom.svg" alt="">
+									</button>
+								</div>
+
 							</div>
 							<div class="structure-descr">
 								<ul class="structure-list">
@@ -1000,90 +1005,92 @@
 				</button>
 			</div>
 			<div class="project--menu__wrapper">
-				<form class="project--menu project--menu__download">
-					<div class="menu--title">
-						<p class="menu--title__text normal-text">
-							Получить пример комплекта
-							чертежей
+				<form class="project--menu">
+					<div class="form--container">
+						<div class="menu--title">
+							<p class="menu--title__text normal-text">
+								Получить пример комплекта
+								чертежей
+							</p>
+							<button type="button" class="project--menu__close" id="btnProjectMenu">
+								<img src="images/close-menu.svg" alt="">
+							</button>
+						</div>
+						<p class="menu--descr">
+							Оставьте ваши данные и мы отправим вам комплект чертежей удобным вам способом.
 						</p>
-						<button type="button" class="project--menu__close" id="btnProjectMenu">
-							<img src="images/close-menu.svg" alt="">
+						<ul class="input--list">
+							<li class="input--list__item">
+								<label for="name">Имя</label>
+								<input type="text" name="name" id="" class="input--list__input input--list__input--name">
+								<span class="error--name" data-input="input--list__input--name">Ошибка. Введите имя</span>
+							</li>
+							<li class="input--list__item">
+								<label for="tel">Номер телефона</label>
+								<input type="text" name="tel" id="" class="input--list__input input--list__input--tel">
+								<span class="error--tel">Ошибка. Введите номер телефона</span>
+							</li>
+							<li class="input--list__item">
+								<label for="email">Email</label>
+								<input type="text" name="email" id="" class="input--list__input input--list__input--email">
+								<span class="error--email">Ошибка введите адресс электронной почты</span>
+							</li>
+						</ul>
+
+						<ul class="checkbox--list">
+							<li class="checkbox--list__item">
+								<label class="checkbox--list__label" for="mail">
+									<input type="checkbox" name="" class="checkbox--list__input" id="mail">
+									<span class="checkbox--list__fake"></span>
+									<span class="checkbox--list__text">
+										Отправить по почте
+									</span>
+								</label>
+							</li>
+							<li class="checkbox--list__item">
+								<label class="checkbox--list__label" for="whatsapp">
+									<input type="checkbox" name="" class="checkbox--list__input" id="whatsapp">
+									<span class="checkbox--list__fake"></span>
+									<span class="checkbox--list__text">
+										Отправить по WhatsApp
+									</span>
+								</label>
+							</li>
+							<li class="checkbox--list__item">
+								<label class="checkbox--list__label" for="viber">
+									<input type="checkbox" name="" class="checkbox--list__input" id="viber">
+									<span class="checkbox--list__fake"></span>
+									<span class="checkbox--list__text">
+										Отправить по Viber
+									</span>
+								</label>
+							</li>
+							<li class="checkbox--list__item">
+								<label class="checkbox--list__label" for="telegram">
+									<input type="checkbox" name="" class="checkbox--list__input" id="telegram">
+									<span class="checkbox--list__fake"></span>
+									<span class="checkbox--list__text">
+										Отправить в Telegram
+									</span>
+								</label>
+							</li>
+						</ul>
+						<button type="submit" class="submit--project normal-text">
+							Отправить
 						</button>
+
+						<a href="#" class="privacy--policy">
+							Нажимая на кнопку, вы принимаете политику конфиденциальности и даете согласие на обработку персональных
+							данных.
+						</a>
 					</div>
-					<p class="menu--descr">
-						Оставьте ваши данные и мы отправим вам комплект чертежей удобным вам способом.
-					</p>
-					<ul class="input--list">
-						<li class="input--list__item">
-							<label for="name">Имя</label>
-							<input type="text" name="name" id="" class="input--list__input input--list__input--name">
-							<span class="error--name">Ошибка. Введите имя</span>
-						</li>
-						<li class="input--list__item">
-							<label for="tel">Номер телефона</label>
-							<input type="text" name="tel" id="" class="input--list__input input--list__input--tel">
-							<span class="error--tel">Ошибка. Введите номер телефона</span>
-						</li>
-						<li class="input--list__item">
-							<label for="email">Email</label>
-							<input type="text" name="email" id="" class="input--list__input input--list__input--email">
-							<span class="error--email">Ошибка введите адресс электронной почты</span>
-						</li>
-					</ul>
-
-					<ul class="checkbox--list">
-						<li class="checkbox--list__item">
-							<label class="checkbox--list__label" for="mail">
-								<input type="checkbox" name="" class="checkbox--list__input" id="mail">
-								<span class="checkbox--list__fake"></span>
-								<span class="checkbox--list__text">
-									Отправить по почте
-								</span>
-							</label>
-						</li>
-						<li class="checkbox--list__item">
-							<label class="checkbox--list__label" for="whatsapp">
-								<input type="checkbox" name="" class="checkbox--list__input" id="whatsapp">
-								<span class="checkbox--list__fake"></span>
-								<span class="checkbox--list__text">
-									Отправить по WhatsApp
-								</span>
-							</label>
-						</li>
-						<li class="checkbox--list__item">
-							<label class="checkbox--list__label" for="viber">
-								<input type="checkbox" name="" class="checkbox--list__input" id="viber">
-								<span class="checkbox--list__fake"></span>
-								<span class="checkbox--list__text">
-									Отправить по Viber
-								</span>
-							</label>
-						</li>
-						<li class="checkbox--list__item">
-							<label class="checkbox--list__label" for="telegram">
-								<input type="checkbox" name="" class="checkbox--list__input" id="telegram">
-								<span class="checkbox--list__fake"></span>
-								<span class="checkbox--list__text">
-									Отправить в Telegram
-								</span>
-							</label>
-						</li>
-					</ul>
-					<button type="submit" class="submit--project normal-text">
-						Отправить
-					</button>
-
-					<a href="#" class="privacy--policy">
-						Нажимая на кнопку, вы принимаете политику конфиденциальности и даете согласие на обработку персональных
-						данных.
-					</a>
 				</form>
 			</div>
 		</section>
 		<div class="frame--block">
 			<img class="frame--block__img" src="images/frame--block.png" alt="">
 		</div>
-		<section class="reviews">
+		<section class="reviews" id="reviews">
 			<div class="container reviews--wrapper">
 				<p class="title--descr normal-text reviews--title__descr">
 					Отзывы о готовых проектах
@@ -1093,7 +1100,9 @@
 					заказчиков
 				</h1>
 			</div>
+			<!-- Slider main container -->
 			<div class="reviews--slider swiper">
+				<!-- Slides -->
 				<div class="reviews--slider__slide swiper--slide">
 					<div class="avatar">
 						<img src="images/avatar.png" alt="">
@@ -1230,7 +1239,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="our--works">
+		<section class="our--works" id="our--works">
 			<div class="container our--works__wrapper">
 				<h1 class="section-title">Наши работы</h1>
 				<span class="slide--counter section-title"><span class="current--slide">1</span>/15</span>
@@ -1243,9 +1252,9 @@
 						<p class="o--w__text">
 							Ферма в селе Бураново
 						</p>
-						<button type="button" class="o--w__btn">
+						<a class="o--w__btn" href="project.html#buy--project">
 							КУПИТЬ ПРОЕКТ
-						</button>
+						</a>
 					</div>
 				</div>
 
@@ -1256,9 +1265,9 @@
 						<p class="o--w__text normal-text">
 							Ферма в селе Бураново
 						</p>
-						<button type="button" class="o--w__btn normal-text">
+						<a href="project.html#buy--project" type="button" class="o--w__btn normal-text">
 							КУПИТЬ ПРОЕКТ
-						</button>
+						</a>
 					</div>
 				</div>
 
@@ -1269,9 +1278,9 @@
 						<p class="o--w__text">
 							Ферма в селе Бураново
 						</p>
-						<button type="button" class="o--w__btn">
+						<a href="project.html#buy--project" type="button" class="o--w__btn">
 							КУПИТЬ ПРОЕКТ
-						</button>
+						</a>
 					</div>
 				</div>
 
@@ -1282,9 +1291,9 @@
 						<p class="o--w__text">
 							Ферма в селе Бураново
 						</p>
-						<button type="button" class="o--w__btn">
+						<a href="project.html#buy--project" type="button" class="o--w__btn normal-text">
 							КУПИТЬ ПРОЕКТ
-						</button>
+						</a>
 					</div>
 				</div>
 
@@ -1295,35 +1304,9 @@
 						<p class="o--w__text">
 							Ферма в селе Бураново
 						</p>
-						<button type="button" class="o--w__btn">
+						<a href="project.html#buy--project" type="button" class="o--w__btn normal-text">
 							КУПИТЬ ПРОЕКТ
-						</button>
-					</div>
-				</div>
-
-				<div class="o--w__slider--slide">
-					<img src="images/ow2.png" alt="" class="o--w__img">
-
-					<div class="o--w__content">
-						<p class="o--w__text normal-text">
-							Ферма в селе Бураново
-						</p>
-						<button type="button" class="o--w__btn normal-text">
-							КУПИТЬ ПРОЕКТ
-						</button>
-					</div>
-				</div>
-
-				<div class="o--w__slider--slide">
-					<img src="images/ow1.png" alt="" class="o--w__img">
-
-					<div class="o--w__content">
-						<p class="o--w__text">
-							Ферма в селе Бураново
-						</p>
-						<button type="button" class="o--w__btn">
-							КУПИТЬ ПРОЕКТ
-						</button>
+						</a>
 					</div>
 				</div>
 
@@ -1334,9 +1317,9 @@
 						<p class="o--w__text normal-text">
 							Ферма в селе Бураново
 						</p>
-						<button type="button" class="o--w__btn normal-text">
+						<a href="project.html#buy--project" type="button" class="o--w__btn normal-text">
 							КУПИТЬ ПРОЕКТ
-						</button>
+						</a>
 					</div>
 				</div>
 
@@ -1347,9 +1330,9 @@
 						<p class="o--w__text">
 							Ферма в селе Бураново
 						</p>
-						<button type="button" class="o--w__btn">
+						<a href="project.html#buy--project" type="button" class="o--w__btn normal-text">
 							КУПИТЬ ПРОЕКТ
-						</button>
+						</a>
 					</div>
 				</div>
 
@@ -1360,9 +1343,9 @@
 						<p class="o--w__text normal-text">
 							Ферма в селе Бураново
 						</p>
-						<button type="button" class="o--w__btn normal-text">
+						<a href="project.html#buy--project" type="button" class="o--w__btn normal-text">
 							КУПИТЬ ПРОЕКТ
-						</button>
+						</a>
 					</div>
 				</div>
 
@@ -1373,9 +1356,9 @@
 						<p class="o--w__text">
 							Ферма в селе Бураново
 						</p>
-						<button type="button" class="o--w__btn">
+						<a href="project.html#buy--project" type="button" class="o--w__btn normal-text">
 							КУПИТЬ ПРОЕКТ
-						</button>
+						</a>
 					</div>
 				</div>
 
@@ -1386,9 +1369,9 @@
 						<p class="o--w__text normal-text">
 							Ферма в селе Бураново
 						</p>
-						<button type="button" class="o--w__btn normal-text">
+						<a href="project.html#buy--project" type="button" class="o--w__btn normal-text">
 							КУПИТЬ ПРОЕКТ
-						</button>
+						</a>
 					</div>
 				</div>
 
@@ -1399,9 +1382,9 @@
 						<p class="o--w__text">
 							Ферма в селе Бураново
 						</p>
-						<button type="button" class="o--w__btn">
+						<a href="project.html#buy--project" type="button" class="o--w__btn normal-text">
 							КУПИТЬ ПРОЕКТ
-						</button>
+						</a>
 					</div>
 				</div>
 
@@ -1412,9 +1395,9 @@
 						<p class="o--w__text normal-text">
 							Ферма в селе Бураново
 						</p>
-						<button type="button" class="o--w__btn normal-text">
+						<a href="project.html#buy--project" type="button" class="o--w__btn normal-text">
 							КУПИТЬ ПРОЕКТ
-						</button>
+						</a>
 					</div>
 				</div>
 
@@ -1425,15 +1408,41 @@
 						<p class="o--w__text">
 							Ферма в селе Бураново
 						</p>
-						<button type="button" class="o--w__btn">
+						<a href="project.html#buy--project" type="button" class="o--w__btn normal-text">
 							КУПИТЬ ПРОЕКТ
-						</button>
+						</a>
+					</div>
+				</div>
+
+				<div class="o--w__slider--slide">
+					<img src="images/ow2.png" alt="" class="o--w__img">
+
+					<div class="o--w__content">
+						<p class="o--w__text normal-text">
+							Ферма в селе Бураново
+						</p>
+						<a href="project.html#buy--project" type="button" class="o--w__btn normal-text">
+							КУПИТЬ ПРОЕКТ
+						</a>
+					</div>
+				</div>
+
+				<div class="o--w__slider--slide">
+					<img src="images/ow1.png" alt="" class="o--w__img">
+
+					<div class="o--w__content">
+						<p class="o--w__text">
+							Ферма в селе Бураново
+						</p>
+						<a href="project.html#buy--project" type="button" class="o--w__btn normal-text">
+							КУПИТЬ ПРОЕКТ
+						</a>
 					</div>
 				</div>
 
 			</div>
 		</section>
-		<section class="design--bureau">
+		<section class="design--bureau" id="design--bureau">
 			<div class="container">
 				<div class="design--bureau__title">
 					<h1 class="section-title design--bureau__title--text">
@@ -1471,7 +1480,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="team">
+		<section class="team" id="team">
 			<div class="container team--wrapper">
 				<div class="about--us">
 					<p class="normal-text about--us__normal">О нас</p>
@@ -1613,11 +1622,14 @@
 				</div>
 			</div>
 		</section>
-		<div class="map">
-			<iframe
+		<div class="map" id="map">
+			<iframe class="map--1"
 				src="https://yandex.ru/map-widget/v1/?um=constructor%3A2fb257217196e2cdbc135e86b2f8a6caf1a950df8b61ff25d602d42ee7cb6d00&amp;source=constructor"
 				width="100%" height="720" frameborder="0">
 			</iframe>
+			<iframe class="map--2"
+				src="https://yandex.ru/map-widget/v1/?um=constructor%3A6f2a1cf090b97317bb78de08cc751de829a0af109d64559cc62a6d649f858a5b&amp;source=constructor"
+				width="100%" height="600" frameborder="0"></iframe>
 		</div>
 	</main>
 

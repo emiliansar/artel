@@ -8,6 +8,14 @@ $(document).ready(function () {
 		infinite: false,
 		focusOnSelect: true,
 		variableWidth: true,
+		responsive: [
+			{
+				breakpoint: 890,
+				settings: {
+					slidesToShow: 1,
+				}
+			},
+		]
 	});
 	$(".reviews--slider").on('wheel', function (e) {
 		e.preventDefault();
@@ -27,6 +35,15 @@ $(document).ready(function () {
 		focusOnSelect: true,
 		waitForAnimate: true,
 		variableWidth: true,
+		swiping: true,
+		responsive: [
+			{
+				breakpoint: 890,
+				settings: {
+					slidesToShow: 1,
+				}
+			},
+		]
 	});
 	$(".o--w__slider").on('wheel', function (e) {
 		e.preventDefault();

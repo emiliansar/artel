@@ -50,11 +50,11 @@ function openProjectMenu() {
 }
 
 window.addEventListener("scroll", function () {
-	let element = document.querySelector(".main-nav__scroll");
+	let element = document.querySelector(".main-nav__scroll--wrapper");
 	let scrollPosition = window.scrollY;
 
 	if (scrollPosition > 100) {
-		element.style.display = "flex";
+		element.style.display = "block";
 	} else {
 		element.style.display = "none";
 	}
